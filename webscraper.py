@@ -18,10 +18,13 @@ with open('scrape.csv', 'w') as csvfile:
     writer.writeheader()
     while json_content == True:
         page_number += 1
-        content = requests.get('http://quotes.toscrape.com.api.quotes?page={}'.format(page_number)).json()
+        content = requests.get('http://quotes.toscrape.com/api/quotes?page={}'.format(page_number)).json()
         content = content["quotes"]
         print(content)
+        json_content = False
+
                             
+
         #if content != []:
             #for quotes in content:
                 #quote_number += 1
@@ -30,6 +33,9 @@ with open('scrape.csv', 'w') as csvfile:
                 #try:
                     #type = quotes["tags"][0].encode("utf-8")
                 #except:
+                    #type = "Unspecified"
+
+
 
 
 
