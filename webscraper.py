@@ -6,7 +6,6 @@ import json
 
 
 page_number = 0
-quote_number = 0
 
 json_content = True
 
@@ -20,7 +19,8 @@ with open("scrape.csv", "w") as csvfile:
         page_number += 1
         content = requests.get('http://quotes.toscrape.com/api/quotes?page={}'.format(page_number)).json()
         content = content["quotes"]
-        print(content)               
+        print(page_number)
+        quote_number = 0
 
         if content != []:
             for quotes in content:
@@ -32,7 +32,7 @@ with open("scrape.csv", "w") as csvfile:
                 except:
                     tag = "Unspecified"
                 quote = quotes["text"].encode("utf-8")
-                di = {"author" : author, "tag" : tag, "quote" : quote}
+                di = {"author":author, "tag":tag, "quote":quote}
                 writer.writerow(di)
         else:
             json_content = False
