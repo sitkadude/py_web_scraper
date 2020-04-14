@@ -4,17 +4,20 @@ import requests
 import csv
 import json
 
-csv_columns = ["Author", "Quote Type", "Quote"]
+
 page_number = 0
 
-jsonContent == True
+json_content == True
 
-with open('scrape.csv', 'w') as outfile:
-    writer = csv.DictWriter(outfile, fieldnames = csv_columns)
+
+with open('scrape.csv', 'w') as csvfile:
+    columns = ['Author', 'Type', 'Quote']
+    writer = csv.DictWriter(csvfile, fieldnames = columns)
+
     writer.writeheader()
-    while jsonContent == True:
+    while json_content == True:
         page_number += 1
-        count = 0
+        content = requests.get('http://quotes
 
 
 
