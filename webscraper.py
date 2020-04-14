@@ -8,7 +8,7 @@ import json
 page_number = 0
 quote_number = 0
 
-json_content == True
+json_content = True
 
 
 with open('scrape.csv', 'w') as csvfile:
