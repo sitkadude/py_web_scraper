@@ -14,7 +14,7 @@ with open('scrape.csv', 'w') as outfile:
     writer.writeheader()
     while jsonContent == True:
         page_number += 1
-        count
+        count = 0
 
 
 
