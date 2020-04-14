@@ -10,7 +10,7 @@ page_number = 0
 json_content = True
 
 
-with open("scrape.csv", "w", encoding='utf8') as csvfile:
+with open("scrape.csv", "w", encoding="utf8") as csvfile:
     columns = ["author", "tag", "quote"]
     writer = csv.DictWriter(csvfile, fieldnames = columns)
 
@@ -26,12 +26,12 @@ with open("scrape.csv", "w", encoding='utf8') as csvfile:
             for quotes in content:
                 quote_number += 1
                 print(quote_number)
-                author = quotes["author"]["name"].encode("utf-8")
+                author = quotes["author"]["name"]
                 try:
-                    tag = quotes["tags"][0].encode("utf-8")
+                    tag = quotes["tags"][0]
                 except:
                     tag = "Unspecified"
-                quote = quotes["text"].encode("utf-8")
+                quote = quotes["text"]
                 di = {"author":author, "tag":tag, "quote":quote}
                 writer.writerow(di)
         else:
