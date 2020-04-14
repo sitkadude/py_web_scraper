@@ -10,7 +10,7 @@ page_number = 0
 json_content = True
 
 
-with open("scrape.csv", "w") as csvfile:
+with open("scrape.csv", "w", encoding='utf8') as csvfile:
     columns = ["author", "tag", "quote"]
     writer = csv.DictWriter(csvfile, fieldnames = columns)
 
