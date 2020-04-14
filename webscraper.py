@@ -20,16 +20,16 @@ with open('scrape.csv', 'w') as csvfile:
         page_number += 1
         content = requests.get('http://quotes.toscrape.com.api.quotes?page={}'.format(page_number)).json()
         content = content["quotes"]
-        print(page_number)
-
-        if content != []:
-            for quotes in content:
-                quote_number += 1
-                print(quote_number)
-                author = quotes["author"]["name"].encode("utf-8")
-                try:
-                    type = quotes["tags"][0].encode("utf-8")
-                except:
+        print(content)
+                            
+        #if content != []:
+            #for quotes in content:
+                #quote_number += 1
+                #print(quote_number)
+                #author = quotes["author"]["name"].encode("utf-8")
+                #try:
+                    #type = quotes["tags"][0].encode("utf-8")
+                #except:
 
 
 
