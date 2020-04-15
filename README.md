@@ -9,4 +9,4 @@ Dependencies:
 
 Directions:
 (1) Download repo
-(2) Run "python webscraper.py"
+(2) Run `python webscraper.py`
