@@ -27,7 +27,7 @@ with open("scrape.csv", "w", encoding="utf8") as csvfile:
         print(page_number) 
         quote_number = 0
 
-        # If content DOES NOT EQUAL an empty list..
+        # If <content> DOES NOT EQUAL an empty list..
         if content != []:
             # Iterate <quotes> through <content>.
             for quotes in content:
