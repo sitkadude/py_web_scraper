@@ -8,6 +8,7 @@ import json
 page_number = 0
 json_data = True
 
+print("Scraping pages...")
 # Create file object.
 with open("scrape.csv", "w", encoding="utf8") as csvfile:
     # Create an array to assign values to <fieldnames> parameter.
@@ -32,7 +33,8 @@ with open("scrape.csv", "w", encoding="utf8") as csvfile:
             # Iterate <quotes> through <content>.
             for quotes in content:
                 quote_number += 1
-                print(quote_number)
+                # Print function used here to test file.
+                # print(quote_number)
                 # Assign the values that are paired to the following JSON keys to these variables.
                 author = quotes["author"]["name"]
                 try:
@@ -48,3 +50,5 @@ with open("scrape.csv", "w", encoding="utf8") as csvfile:
         else:
             json_data = False
             print("Scrape complete!")
+            print("New csv outfile created.")
+            
