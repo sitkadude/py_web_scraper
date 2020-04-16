@@ -1,6 +1,6 @@
 # WEB SCRAPER
 
-This is a python script that scrapes data off of a json api on `toscrape.com`. Permission to scrape the data is granted by `toscrape.com` to the general public. The result is a csv outfile.
+I created this repository as an exercise for python, pagination and web scraping. Toscrape.com is a website designed solely for the purpose of web scraping. The json data scraped consists of quotes from various famous authors. The result is a csv outfile.
 
 DEPENDENCIES:<br/>
 (1) requests<br/>
